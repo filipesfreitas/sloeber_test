@@ -3,7 +3,7 @@
 #include "gsmconfig.h"
 #define TINY_GSM_MODEM_SIM800
 #define SIM800L_IP5306_VERSION_20190610
-#define cancela_pin 21
+#define cancela_pin 19
 #define led 13
 #define TIMEOUT 1000
 #define SerialMon Serial
@@ -68,16 +68,14 @@ void setup()
 BLYNK_WRITE(V0) {
   int restarts = param.asInt();
   if (restarts == 1) {
-    digitalWrite(led, LOW);
+    digitalWrite(led, HIGH);
     digitalWrite(cancela_pin, LOW);
     delay(TIMEOUT);
-    SerialMon.print("\v\vPin LOW\v\v");
   }
   else {
-    digitalWrite(led, HIGH);
+    digitalWrite(led, LOW);
     digitalWrite(cancela_pin, HIGH);
     delay(TIMEOUT);
-    SerialMon.print("\v\vPin HIGH\v\v");
 
   }
 }
