@@ -13,6 +13,14 @@
 #define GSM_PIN ""
 #define reconection_attempts 2
 
+/*
+ * To do:
+ *
+ * Adicionar comunicação por wifi
+ * adicionar interface de comandos para eventual log
+ * adicionar controle de abertura
+ *
+ * */
 short int reconnections = 0;
 const char apn[] = "zap.vivo.com.br";
 const char gprsUser[] = "";
